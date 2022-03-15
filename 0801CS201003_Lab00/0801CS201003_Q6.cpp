@@ -7,14 +7,15 @@ int main()
 {
   int n;
   cin>>n;
+  vector<int>a(n+1);
+  for(int i=0; i<n+1; i++) cin>>a[i];
 
-  int ans=0;
-  while(n)
+  int sum=0;
+  for(int i=0; i<n; i++)
   {
-    ans+=(n%10); // adding unit digit
-    n/=10;       // removing unit digit
+    sum+=a[i];
   }
-  cout<<ans<<"\n";
-
+  // avg is sum/no of elements
+  cout<<sum/n<<"\n";
   return 0;
 }

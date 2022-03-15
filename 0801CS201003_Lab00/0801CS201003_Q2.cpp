@@ -1,35 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
+#define fast ios_base::sync_with_stdio(false);cin.tie(NULL);
 
-//base class
-class Shape
+//function to add no.s
+double addThree(double a, double b, double c)
 {
-  public:
-  Shape()
-  {
-    cout<<"This is base class\n";
-  }
-};
+  return a+b+c;
+}
 
-//child class
-class Circle : public Shape
-{
-  public:
-  Circle()
-  {
-    cout<<"This is base class\n";
-  }
-
-  double area_of_circle(double r)
-  {
-    return (3.14*r*r);
-  }
-};
-
-//driver code
 int main()
 {
-  Circle c;
-  cout<<c.area_of_circle(2);
+  double a,b,c;
+  cin>>a>>b>>c;
+  cout<<addThree(a,b,c)<<"\n";
+
   return 0;
 }

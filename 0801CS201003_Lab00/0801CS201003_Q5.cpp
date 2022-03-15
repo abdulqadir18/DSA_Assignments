@@ -7,14 +7,15 @@ int main()
 {
   int n;
   cin>>n;
+  vector<int>a(n);
+  for(int i=0; i<n; i++) cin>>a[i];
 
-  int ans=0;
-  while(n)
+  int ans=INT_MIN;
+  for(int i=0; i<n; i++)
   {
-    ans+=(n%10); // adding unit digit
-    n/=10;       // removing unit digit
+    //standard function to find maximum
+    ans=max(ans,a[i]);
   }
   cout<<ans<<"\n";
-
   return 0;
 }
